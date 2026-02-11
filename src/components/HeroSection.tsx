@@ -1,0 +1,71 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { CalendarDays, MapPin } from "lucide-react";
+
+const GOOGLE_FORM_URL = "#apply";
+
+const HeroSection = () => (
+  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+    {/* Background pattern */}
+    <div className="absolute inset-0 opacity-[0.04]" style={{
+      backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+      backgroundSize: "32px 32px",
+    }} />
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+
+    <div className="container mx-auto px-4 text-center relative z-10 max-w-4xl">
+      <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
+        SPARC-Sponsored Three-Day Hands-On Workshop
+      </p>
+      <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
+        Smart Water:{" "}
+        <span className="text-primary">From Technologies to Data Science</span>
+      </h1>
+      <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+        A focused, hands-on workshop connecting water technologies, monitoring, and modern data science—from water treatment concepts and sensing to reproducible analytics, modeling, and decision-ready insights.
+      </p>
+
+      <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mb-8">
+        <span className="flex items-center gap-1.5">
+          <CalendarDays size={16} className="text-primary" />
+          06–08 April 2026
+        </span>
+        <span className="flex items-center gap-1.5">
+          <MapPin size={16} className="text-primary" />
+          ICSR, IIT Madras, Chennai
+        </span>
+      </div>
+
+      <p className="text-sm text-muted-foreground mb-6">
+        Jointly organized by IIT Madras, Tel Aviv University &amp; KMCH Research Foundation
+        <br className="hidden sm:block" />
+        (under the People's Water Data initiative)
+      </p>
+
+      {/* Logos placeholder */}
+      <div className="flex items-center justify-center gap-6 mb-8 opacity-50">
+        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">SPARC</div>
+        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">IITM</div>
+        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">TAU</div>
+        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">KMCH</div>
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+        <Button asChild size="lg" className="text-base px-8">
+          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+            Apply / Submit EOI
+          </a>
+        </Button>
+        <Button asChild variant="outline" size="lg" className="text-base px-8">
+          <a href="#program">View Program</a>
+        </Button>
+      </div>
+
+      <Badge variant="secondary" className="text-xs">
+        Seats limited · Selection-based
+      </Badge>
+    </div>
+  </section>
+);
+
+export default HeroSection;
