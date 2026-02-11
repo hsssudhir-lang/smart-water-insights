@@ -1,14 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import QuickFacts from "@/components/QuickFacts";
+import AboutSection from "@/components/AboutSection";
+import WhyAttend from "@/components/WhyAttend";
+import LearningThemes from "@/components/LearningThemes";
+import WorkshopFormat from "@/components/WorkshopFormat";
+import ProgramSchedule from "@/components/ProgramSchedule";
+import SpeakersSection from "@/components/SpeakersSection";
+import WhoShouldApply from "@/components/WhoShouldApply";
+import ImportantDates from "@/components/ImportantDates";
+import FeesSection from "@/components/FeesSection";
+import HowToApply from "@/components/HowToApply";
+import VenueSection from "@/components/VenueSection";
+import PrerequisitesSection from "@/components/PrerequisitesSection";
+import FAQSection from "@/components/FAQSection";
+import FooterSection from "@/components/FooterSection";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <>
+    <Navbar />
+    <main>
+      <HeroSection />
+      <QuickFacts />
+      <AboutSection />
+      <WhyAttend />
+      <LearningThemes />
+      <WorkshopFormat />
+      <ProgramSchedule />
+      <SpeakersSection />
+      <WhoShouldApply />
+      <ImportantDates />
+      <FeesSection />
+      <HowToApply />
+      <VenueSection />
+      <PrerequisitesSection />
+      <FAQSection />
+      <FooterSection />
+    </main>
+  </>
+);
 
 export default Index;
