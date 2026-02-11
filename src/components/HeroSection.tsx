@@ -5,7 +5,7 @@ import { CalendarDays, MapPin } from "lucide-react";
 const GOOGLE_FORM_URL = "#apply";
 
 const HeroSection = () => (
-  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
     {/* Background pattern */}
     <div className="absolute inset-0 opacity-[0.04]" style={{
       backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
@@ -14,6 +14,9 @@ const HeroSection = () => (
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
 
     <div className="container mx-auto px-4 text-center relative z-10 max-w-4xl">
+      <div className="flex justify-center mb-4">
+        <img src="/logo-sparc.png" alt="SPARC" className="h-14 object-contain" />
+      </div>
       <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-4">
         SPARC-Sponsored Three-Day Hands-On Workshop
       </p>
@@ -42,12 +45,11 @@ const HeroSection = () => (
         (under the People's Water Data initiative)
       </p>
 
-      {/* Logos placeholder */}
-      <div className="flex items-center justify-center gap-6 mb-8 opacity-50">
-        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">SPARC</div>
-        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">IITM</div>
-        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">TAU</div>
-        <div className="w-16 h-16 rounded bg-muted flex items-center justify-center text-[10px] text-muted-foreground">KMCH</div>
+      {/* Partner logos */}
+      <div className="flex items-center justify-center gap-8 mb-8 flex-wrap">
+        <img src="/logo-iitm.png" alt="IIT Madras" className="h-16 object-contain" />
+        <img src="/logo-tau.png" alt="Tel Aviv University" className="h-14 object-contain" />
+        <img src="/logo-kmch.png" alt="KMCH Research Foundation" className="h-14 object-contain" />
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">

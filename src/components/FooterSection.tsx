@@ -14,12 +14,11 @@ const FooterSection = () => (
         Subject line: "Smart Water Workshop 2026 – Query"
       </p>
 
-      {/* Partner logos placeholder */}
-      <div className="flex items-center justify-center gap-6 opacity-40 mb-8">
-        <div className="w-14 h-14 rounded bg-secondary-foreground/10 flex items-center justify-center text-[9px]">SPARC</div>
-        <div className="w-14 h-14 rounded bg-secondary-foreground/10 flex items-center justify-center text-[9px]">IITM</div>
-        <div className="w-14 h-14 rounded bg-secondary-foreground/10 flex items-center justify-center text-[9px]">TAU</div>
-        <div className="w-14 h-14 rounded bg-secondary-foreground/10 flex items-center justify-center text-[9px]">KMCH</div>
+      {/* Partner logos */}
+      <div className="flex items-center justify-center gap-8 mb-8 flex-wrap">
+        <img src="/logo-iitm.png" alt="IIT Madras" className="h-14 object-contain brightness-0 invert opacity-70" />
+        <img src="/logo-tau.png" alt="Tel Aviv University" className="h-12 object-contain brightness-0 invert opacity-70" />
+        <img src="/logo-kmch.png" alt="KMCH Research Foundation" className="h-12 object-contain brightness-0 invert opacity-70" />
       </div>
 
       <p className="text-xs opacity-50">
