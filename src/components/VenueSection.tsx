@@ -28,7 +28,7 @@ const VenueSection = () => (
           <MapPin size={22} className="text-primary mb-2" />
           <h3 className="font-semibold text-foreground text-sm mb-1">Accommodation</h3>
           <p className="text-xs text-muted-foreground">
-            Accommodation will be arranged for selected participants. Check-in and details shared via email.
+            Accommodation and food will be arranged for selected participants. Check-in and details shared via email.
           </p>
         </div>
       </div>

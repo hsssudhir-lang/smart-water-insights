@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FileText, Search, ListChecks, CreditCard, CheckCircle } from "lucide-react";
 
-const GOOGLE_FORM_URL = "#apply";
+const GOOGLE_FORM_URL = "https://forms.gle/tvrF552Ye7kmvRcA6";
 
 const steps = [
   { icon: FileText, label: "Submit EOI" },

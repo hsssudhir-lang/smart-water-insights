@@ -3,9 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import QuickFacts from "@/components/QuickFacts";
 import AboutSection from "@/components/AboutSection";
 import WhyAttend from "@/components/WhyAttend";
-import LearningThemes from "@/components/LearningThemes";
-import WorkshopFormat from "@/components/WorkshopFormat";
-import ProgramSchedule from "@/components/ProgramSchedule";
 import SpeakersSection from "@/components/SpeakersSection";
 import WhoShouldApply from "@/components/WhoShouldApply";
 import ImportantDates from "@/components/ImportantDates";
@@ -24,9 +21,6 @@ const Index = () => (
       <QuickFacts />
       <AboutSection />
       <WhyAttend />
-      <LearningThemes />
-      <WorkshopFormat />
-      <ProgramSchedule />
       <SpeakersSection />
       <WhoShouldApply />
       <ImportantDates />

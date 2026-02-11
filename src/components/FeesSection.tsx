@@ -32,7 +32,7 @@ const FeesSection = () => (
             </TableRow>
             <TableRow>
               <TableCell>Industry Participants</TableCell>
-              <TableCell className="text-right font-semibold">₹5,000</TableCell>
+              <TableCell className="text-right font-semibold">₹4,000</TableCell>
             </TableRow>
           </TableBody>
         </Table>

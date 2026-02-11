@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
-const GOOGLE_FORM_URL = "#apply";
+const GOOGLE_FORM_URL = "https://forms.gle/tvrF552Ye7kmvRcA6";
 
 const navLinks = [
   { label: "Overview", href: "#about" },

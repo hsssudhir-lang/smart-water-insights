@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Droplets, Wrench, BarChart3, BrainCircuit, Eye, FileCheck } from "lucide-react";
+import { Droplets, Wrench, BarChart3, BrainCircuit, Eye, Waypoints } from "lucide-react";
 
 const benefits = [
   { icon: Droplets, title: "Water Data & Hydroinformatics", desc: "A practical understanding of what is (and isn't) possible with typical monitoring datasets." },
@@ -7,7 +7,7 @@ const benefits = [
   { icon: BarChart3, title: "Data Preprocessing Skills", desc: "Clean, harmonize, and preprocess water datasets for analysis and modeling." },
   { icon: BrainCircuit, title: "Time-series & ML Foundations", desc: "Analysis, prediction, and classification foundations for water applications." },
   { icon: Eye, title: "GenAI & Geospatial", desc: "Introductory exposure to GenAI use-cases and geospatial approaches for water quality mapping." },
-  { icon: FileCheck, title: "Reproducibility Mindset", desc: "Versioning, documentation, and transparent evaluation as best practices." },
+  { icon: Waypoints, title: "Digital Twin – Water Health Nexus", desc: "Explore digital twin frameworks linking water quality data with public health outcomes for predictive, real-time decision-making." },
 ];
 
 const WhyAttend = () => (

@@ -1,52 +1,161 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { User } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
-const speakers = [
-  { name: "Prof. Hadas Mamane", affiliation: "Tel Aviv University", topic: "Water technologies & data" },
-  { name: "Prof. Thalappil Pradeep", affiliation: "IIT Madras", topic: "Water purification" },
-  { name: "Prof. Ligy Philip", affiliation: "IIT Madras", topic: "Environmental engineering" },
-  { name: "Prof. Rajnish Kumar", affiliation: "IIT Madras", topic: "Water systems" },
-  { name: "Dr. G. Velmurugan", affiliation: "KMCH Research Foundation", topic: "Health & water data" },
-  { name: "Dr. Ramanathan Muthuganapathy", affiliation: "IIT Madras", topic: "AI/ML & data science" },
-  { name: "Dr. Agastya Bhati", affiliation: "IIT Madras", topic: "AI for healthcare / digital twins" },
-  { name: "Arvind Kumar", affiliation: "Director, Optym", topic: "Optimization & modeling" },
-  { name: "Dr. Souvik Barat", affiliation: "TCS", topic: "Digital twins & simulation" },
-  { name: "Rasagy Sharma", affiliation: "Capital One / NID", topic: "Information design & visualization" },
-  { name: "Dr. Kandaswamy Paramasivan (IPS)", affiliation: "IIT Madras", topic: "AI for public policy" },
-  { name: "Dr. Neha Karanjkar", affiliation: "IIT Goa", topic: "Digital twins" },
-  { name: "Prof. Ravindra D. Gudi", affiliation: "IIT Bombay", topic: "Digital twins" },
-  { name: "Dr. Priyank J. Sharma", affiliation: "IIT Indore", topic: "Water-climate nexus" },
-  { name: "Prof. Varum Ramamohan", affiliation: "IIT Delhi", topic: "Probabilistic modeling" },
+type TagType = "Speaker" | "Guest of Honor" | "Resource Person";
+
+const tagColors: Record<TagType, string> = {
+  Speaker: "bg-primary text-primary-foreground",
+  "Guest of Honor": "bg-amber-500 text-white",
+  "Resource Person": "bg-emerald-600 text-white",
+};
+
+interface Speaker {
+  name: string;
+  position: string;
+  affiliation: string;
+  image: string;
+  tags: TagType[];
+  website: string;
+}
+
+const speakers: Speaker[] = [
+  {
+    name: "Prof. Thalappil Pradeep",
+    position: "Institute Professor",
+    affiliation: "Department of Chemistry, IIT Madras",
+    image: "/speaker-pradeep.png",
+    tags: ["Speaker"],
+    website: "https://pradeepresearch.org/",
+  },
+  {
+    name: "Prof. Hadas Mamane",
+    position: "Full Professor",
+    affiliation: "School of Mechanical Engineering, Tel Aviv University",
+    image: "/speaker-hadas.png",
+    tags: ["Speaker"],
+    website: "https://english.tau.ac.il/profile/hadasmg",
+  },
+  {
+    name: "Prof. Supawan Tantayanon",
+    position: "Professor",
+    affiliation: "Department of Chemistry, Chulalongkorn University",
+    image: "/speaker-supawan.png",
+    tags: ["Speaker", "Guest of Honor"],
+    website: "https://web.chemcu.org/supawan-tantayanon/",
+  },
+  {
+    name: "Prof. Rabibrata Mukherjee",
+    position: "Professor & National Coordinator, SPARC",
+    affiliation: "Department of Chemical Engineering, IIT Kharagpur",
+    image: "/speaker-rabibrata.png",
+    tags: ["Guest of Honor"],
+    website: "https://www.iitkgp.ac.in/department/CH/faculty/ch-rabibrata",
+  },
+  {
+    name: "Prof. Rajnish Kumar",
+    position: "Professor",
+    affiliation: "Department of Chemical Engineering, IIT Madras",
+    image: "/speaker-rajnish.png",
+    tags: ["Resource Person"],
+    website: "https://sites.google.com/site/rajnishresearchgroup/",
+  },
+  {
+    name: "Dr. G. Velmurugan",
+    position: "Researcher",
+    affiliation: "KMCH Research Foundation",
+    image: "/speaker-velmurugan.png",
+    tags: ["Resource Person"],
+    website: "https://www.linkedin.com/in/velmurugan-%E0%AE%B5%E0%AF%87%E0%AE%B2%E0%AF%8D%E0%AE%AE%E0%AF%81%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AE%A9%E0%AF%8D-7a8952268/",
+  },
+  {
+    name: "Prof. Ligy Philip",
+    position: "Institute Chair Professor",
+    affiliation: "Department of Civil Engineering, IIT Madras",
+    image: "/speaker-ligy.png",
+    tags: ["Resource Person"],
+    website: "https://civil.iitm.ac.in/faculty/ligy/",
+  },
 ];
 
 const SpeakersSection = () => (
   <section id="speakers" className="py-20 bg-muted/50">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Speakers & Resource Persons</h2>
-      <p className="text-muted-foreground text-center max-w-xl mx-auto mb-12">
+      <h2 className="text-3xl font-bold text-foreground mb-4 text-center">
+        Speakers & Resource Persons
+      </h2>
+      <p className="text-muted-foreground text-center max-w-xl mx-auto mb-6">
         Leading experts from across India and internationally.
       </p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      {/* Legend */}
+      <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        {Object.entries(tagColors).map(([label, color]) => (
+          <span
+            key={label}
+            className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${color}`}
+          >
+            {label}
+          </span>
+        ))}
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {speakers.map((s) => (
-          <Card key={s.name} className="border shadow-sm">
-            <CardContent className="flex items-start gap-3 pt-5">
-              <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
-                <User size={18} className="text-muted-foreground" />
+          <div
+            key={s.name}
+            className="group bg-card rounded-xl border shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+          >
+            {/* Image */}
+            <div className="relative aspect-[4/4] overflow-hidden bg-muted">
+              <img
+                src={s.image}
+                alt={s.name}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Info */}
+            <div className="p-4 text-center">
+              <h3 className="font-bold text-foreground text-base mb-1">
+                {s.name}
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-1">
+                {s.position}
+              </p>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                {s.affiliation}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
+                {s.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    className={`text-[10px] px-2 py-0.5 font-semibold border-0 ${tagColors[tag]}`}
+                  >
+                    {tag}
+                  </Badge>
+                ))}
               </div>
-              <div>
-                <h3 className="font-semibold text-sm text-foreground">{s.name}</h3>
-                <p className="text-xs text-muted-foreground">{s.affiliation}</p>
-                <p className="text-xs text-primary mt-1">{s.topic}</p>
-              </div>
-            </CardContent>
-          </Card>
+
+              {/* Website link */}
+              <a
+                href={s.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs text-primary hover:underline font-medium"
+              >
+                <ExternalLink size={12} />
+                View Profile
+              </a>
+            </div>
+          </div>
         ))}
       </div>
 
       <div className="mt-10 text-center">
         <p className="text-sm text-muted-foreground italic">
-          Hands-on tutorials will be facilitated by the workshop instructional team.
+          More exciting speakers are lined up and will be updated here. Stay tuned!
         </p>
       </div>
     </div>

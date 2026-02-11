@@ -1,11 +1,10 @@
-import { CalendarDays, MapPin, Users, Clock, IndianRupee } from "lucide-react";
+import { CalendarDays, MapPin, Users, Clock } from "lucide-react";
 
 const facts = [
   { icon: CalendarDays, label: "Dates", value: "06–08 Apr 2026" },
   { icon: MapPin, label: "Venue", value: "ICSR, IIT Madras" },
   { icon: Users, label: "Mode", value: "On-site" },
   { icon: Clock, label: "Deadline", value: "28 Feb 2026" },
-  { icon: IndianRupee, label: "Fee", value: "₹1,000–₹5,000" },
 ];
 
 const QuickFacts = () => (
