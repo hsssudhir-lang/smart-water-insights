@@ -2,7 +2,7 @@ const dates = [
   { date: "11 Feb 2026", label: "Applications Open" },
   { date: "28 Feb 2026", label: "Applications Close (11:59 PM IST)" },
   { date: "03 Mar 2026", label: "Shortlist Announcement (Email)" },
-  { date: "05 Mar 2026", label: "Fee Payment Deadline" },
+  { date: "10 Mar 2026", label: "Fee Payment Deadline" },
   { date: "06–08 Apr 2026", label: "Workshop Dates" },
 ];
 
@@ -31,7 +31,7 @@ const ImportantDates = () => (
       </div>
 
       <p className="text-xs text-muted-foreground text-center mt-8 italic">
-        Shortlisted participants will receive payment instructions by email.
+        Shortlisted participants will receive payment instructions by email. Please note that the workshop fee is non-refundable.
       </p>
     </div>
   </section>

@@ -48,6 +48,9 @@ const FeesSection = () => (
         ))}
       </div>
 
+      <p className="text-xs text-muted-foreground italic mb-2">
+        All fees are inclusive of applicable GST.
+      </p>
       <p className="text-xs text-muted-foreground italic">
         Travel to Chennai / IIT Madras is typically borne by participants unless otherwise specified.
       </p>
