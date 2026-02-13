@@ -1,12 +1,12 @@
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
-type TagType = "Speaker" | "Guest of Honor" | "Resource Person";
+type TagType = "Speaker" | "Chief Guest" | "Organiser";
 
 const tagColors: Record<TagType, string> = {
   Speaker: "bg-primary text-primary-foreground",
-  "Guest of Honor": "bg-amber-500 text-white",
-  "Resource Person": "bg-emerald-600 text-white",
+  "Chief Guest": "bg-amber-500 text-white",
+  "Organiser": "bg-emerald-600 text-white",
 };
 
 interface Speaker {
@@ -19,6 +19,24 @@ interface Speaker {
 }
 
 const speakers: Speaker[] = [
+  // Chief Guests first
+  {
+    name: "Prof. Supawan Tantayanon",
+    position: "Professor",
+    affiliation: "Department of Chemistry, Chulalongkorn University",
+    image: "/speaker-supawan.png",
+    tags: ["Speaker", "Chief Guest"],
+    website: "https://web.chemcu.org/supawan-tantayanon/",
+  },
+  {
+    name: "Prof. Rabibrata Mukherjee",
+    position: "Professor & National Coordinator, SPARC",
+    affiliation: "Department of Chemical Engineering, IIT Kharagpur",
+    image: "/speaker-rabibrata.png",
+    tags: ["Chief Guest"],
+    website: "https://www.iitkgp.ac.in/department/CH/faculty/ch-rabibrata",
+  },
+  // Speakers second
   {
     name: "Prof. Thalappil Pradeep",
     position: "Institute Professor",
@@ -36,27 +54,36 @@ const speakers: Speaker[] = [
     website: "https://english.tau.ac.il/profile/hadasmg",
   },
   {
-    name: "Prof. Supawan Tantayanon",
-    position: "Professor",
-    affiliation: "Department of Chemistry, Chulalongkorn University",
-    image: "/speaker-supawan.png",
-    tags: ["Speaker", "Guest of Honor"],
-    website: "https://web.chemcu.org/supawan-tantayanon/",
+    name: "Dr. Priyank J. Sharma",
+    position: "Assistant Professor",
+    affiliation: "Department of Civil Engineering, IIT Indore",
+    image: "/speaker-priyank.png",
+    tags: ["Speaker"],
+    website: "https://sites.google.com/view/priyank2306/research-group?authuser=0",
   },
   {
-    name: "Prof. Rabibrata Mukherjee",
-    position: "Professor & National Coordinator, SPARC",
-    affiliation: "Department of Chemical Engineering, IIT Kharagpur",
-    image: "/speaker-rabibrata.png",
-    tags: ["Guest of Honor"],
-    website: "https://www.iitkgp.ac.in/department/CH/faculty/ch-rabibrata",
+    name: "Dr. Kandaswamy Paramasivan IPS",
+    position: "Professor of Practice",
+    affiliation: "IIT Madras (Formerly DGP/Director, Vigilance & Anti-Corruption)",
+    image: "/speaker-kandaswamy.png",
+    tags: ["Speaker"],
+    website: "https://kandaswamyparamasivan.in/",
   },
+  {
+    name: "Mr. Arvind Kumar",
+    position: "Director",
+    affiliation: "Optym",
+    image: "/speaker-arvind.png",
+    tags: ["Speaker"],
+    website: "https://www.linkedin.com/in/arviphd/?originalSubdomain=in",
+  },
+  // Organisers last
   {
     name: "Prof. Rajnish Kumar",
     position: "Professor",
     affiliation: "Department of Chemical Engineering, IIT Madras",
     image: "/speaker-rajnish.png",
-    tags: ["Resource Person"],
+    tags: ["Organiser"],
     website: "https://sites.google.com/site/rajnishresearchgroup/",
   },
   {
@@ -64,7 +91,7 @@ const speakers: Speaker[] = [
     position: "Researcher",
     affiliation: "KMCH Research Foundation",
     image: "/speaker-velmurugan.png",
-    tags: ["Resource Person"],
+    tags: ["Organiser"],
     website: "https://www.linkedin.com/in/velmurugan-%E0%AE%B5%E0%AF%87%E0%AE%B2%E0%AF%8D%E0%AE%AE%E0%AF%81%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AE%A9%E0%AF%8D-7a8952268/",
   },
   {
@@ -72,7 +99,7 @@ const speakers: Speaker[] = [
     position: "Institute Chair Professor",
     affiliation: "Department of Civil Engineering, IIT Madras",
     image: "/speaker-ligy.png",
-    tags: ["Resource Person"],
+    tags: ["Organiser"],
     website: "https://civil.iitm.ac.in/faculty/ligy/",
   },
 ];
@@ -81,7 +108,7 @@ const SpeakersSection = () => (
   <section id="speakers" className="py-20 bg-muted/50">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-foreground mb-4 text-center">
-        Speakers & Resource Persons
+        Speakers & Organisers
       </h2>
       <p className="text-muted-foreground text-center max-w-xl mx-auto mb-6">
         Leading experts from across India and internationally.
