@@ -16,6 +16,7 @@ interface Speaker {
   image: string;
   tags: TagType[];
   website: string;
+  talkTitle?: string;
 }
 
 const speakers: Speaker[] = [
@@ -42,7 +43,7 @@ const speakers: Speaker[] = [
     position: "Institute Professor",
     affiliation: "Department of Chemistry, IIT Madras",
     image: "/speaker-pradeep.png",
-    tags: ["Speaker"],
+    tags: ["Speaker", "Organiser"],
     website: "https://pradeepresearch.org/",
   },
   {
@@ -50,7 +51,7 @@ const speakers: Speaker[] = [
     position: "Full Professor",
     affiliation: "School of Mechanical Engineering, Tel Aviv University",
     image: "/speaker-hadas.png",
-    tags: ["Speaker"],
+    tags: ["Speaker", "Organiser"],
     website: "https://english.tau.ac.il/profile/hadasmg",
   },
   {
@@ -60,6 +61,7 @@ const speakers: Speaker[] = [
     image: "/speaker-priyank.png",
     tags: ["Speaker"],
     website: "https://sites.google.com/view/priyank2306/research-group?authuser=0",
+    talkTitle: "Digital Twins: Water-Climate Nexus using AI/ML",
   },
   {
     name: "Dr. Kandaswamy Paramasivan IPS",
@@ -68,6 +70,15 @@ const speakers: Speaker[] = [
     image: "/speaker-kandaswamy.png",
     tags: ["Speaker"],
     website: "https://kandaswamyparamasivan.in/",
+    talkTitle: "Artificial Intelligence for Public Policy and Governance, including turning complex datasets into clear narratives and visuals",
+  },
+  {
+    name: "Prof. M. Ramanathan",
+    position: "Professor",
+    affiliation: "Department of Engineering Design, IIT Madras",
+    image: "/speaker-ramanathan.png",
+    tags: ["Speaker"],
+    website: "https://ed.iitm.ac.in/~raman/",
   },
   {
     name: "Mr. Arvind Kumar",
@@ -87,20 +98,20 @@ const speakers: Speaker[] = [
     website: "https://sites.google.com/site/rajnishresearchgroup/",
   },
   {
-    name: "Dr. G. Velmurugan",
-    position: "Researcher",
-    affiliation: "KMCH Research Foundation",
-    image: "/speaker-velmurugan.png",
-    tags: ["Organiser"],
-    website: "https://www.linkedin.com/in/velmurugan-%E0%AE%B5%E0%AF%87%E0%AE%B2%E0%AF%8D%E0%AE%AE%E0%AF%81%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AE%A9%E0%AF%8D-7a8952268/",
-  },
-  {
     name: "Prof. Ligy Philip",
     position: "Institute Chair Professor",
     affiliation: "Department of Civil Engineering, IIT Madras",
     image: "/speaker-ligy.png",
     tags: ["Organiser"],
     website: "https://civil.iitm.ac.in/faculty/ligy/",
+  },
+  {
+    name: "Dr. G. Velmurugan",
+    position: "Researcher",
+    affiliation: "KMCH Research Foundation",
+    image: "/speaker-velmurugan.png",
+    tags: ["Organiser"],
+    website: "https://chemomicrobiomics.wixsite.com/cmblab/research",
   },
 ];
 
@@ -152,6 +163,18 @@ const SpeakersSection = () => (
               <p className="text-xs text-muted-foreground leading-relaxed mb-3">
                 {s.affiliation}
               </p>
+
+              {/* Talk Title */}
+              {s.talkTitle && (
+                <div className="mb-3 px-3 py-2 bg-primary/5 border-l-2 border-primary rounded">
+                  <p className="text-[10px] font-semibold text-primary uppercase tracking-wide mb-1">
+                    Talk Title
+                  </p>
+                  <p className="text-xs text-foreground leading-relaxed">
+                    {s.talkTitle}
+                  </p>
+                </div>
+              )}
 
               {/* Tags */}
               <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
