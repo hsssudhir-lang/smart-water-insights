@@ -4,6 +4,7 @@ import QuickFacts from "@/components/QuickFacts";
 import AboutSection from "@/components/AboutSection";
 import WhyAttend from "@/components/WhyAttend";
 import SpeakersSection from "@/components/SpeakersSection";
+import ProgramSchedule from "@/components/ProgramSchedule";
 import WhoShouldApply from "@/components/WhoShouldApply";
 import ImportantDates from "@/components/ImportantDates";
 import FeesSection from "@/components/FeesSection";
@@ -22,6 +23,7 @@ const Index = () => (
       <AboutSection />
       <WhyAttend />
       <SpeakersSection />
+      <ProgramSchedule />
       <WhoShouldApply />
       <ImportantDates />
       <FeesSection />

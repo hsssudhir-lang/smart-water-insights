@@ -28,6 +28,7 @@ const speakers: Speaker[] = [
     image: "/speaker-supawan.png",
     tags: ["Speaker", "Chief Guest"],
     website: "https://web.chemcu.org/supawan-tantayanon/",
+    talkTitle: "Chemistry in Practice: Small-Scale Labs and the IUPAC Guiding Principles of Responsible Chemistry",
   },
   {
     name: "Prof. Rabibrata Mukherjee",
@@ -45,6 +46,7 @@ const speakers: Speaker[] = [
     image: "/speaker-pradeep.png",
     tags: ["Speaker", "Organiser"],
     website: "https://pradeepresearch.org/",
+    talkTitle: "Vision of People's Water Data",
   },
   {
     name: "Prof. Hadas Mamane",
@@ -53,6 +55,7 @@ const speakers: Speaker[] = [
     image: "/speaker-hadas.png",
     tags: ["Speaker", "Organiser"],
     website: "https://english.tau.ac.il/profile/hadasmg",
+    talkTitle: "Decentralized Water Technologies",
   },
   {
     name: "Dr. Priyank J. Sharma",
@@ -61,7 +64,7 @@ const speakers: Speaker[] = [
     image: "/speaker-priyank.png",
     tags: ["Speaker"],
     website: "https://sites.google.com/view/priyank2306/research-group?authuser=0",
-    talkTitle: "Digital Twins: Water-Climate Nexus using AI/ML",
+    talkTitle: "Digital Twins: Water-Climate Nexus",
   },
   {
     name: "Dr. Kandaswamy Paramasivan IPS",
@@ -70,7 +73,7 @@ const speakers: Speaker[] = [
     image: "/speaker-kandaswamy.png",
     tags: ["Speaker"],
     website: "https://kandaswamyparamasivan.in/",
-    talkTitle: "Artificial Intelligence for Public Policy and Governance, including turning complex datasets into clear narratives and visuals",
+    talkTitle: "Artificial Intelligence for Public Policy and Governance",
   },
   {
     name: "Prof. M. Ramanathan",
@@ -79,6 +82,7 @@ const speakers: Speaker[] = [
     image: "/speaker-ramanathan.png",
     tags: ["Speaker"],
     website: "https://ed.iitm.ac.in/~raman/",
+    talkTitle: "AI, Machine Learning, and Data Science for Chemistry/Health",
   },
   {
     name: "Mr. Arvind Kumar",
@@ -87,6 +91,25 @@ const speakers: Speaker[] = [
     image: "/speaker-arvind.png",
     tags: ["Speaker"],
     website: "https://www.linkedin.com/in/arviphd/?originalSubdomain=in",
+    talkTitle: "Optimization and Mathematical Modeling: Foundations and Applications",
+  },
+  {
+    name: "Prof. Manoj K. Tiwari",
+    position: "Associate Professor",
+    affiliation: "Department of Civil Engineering, IIT Kanpur",
+    image: "/speaker-manoj.png",
+    tags: ["Speaker"],
+    website: "https://iitk.ac.in/manoj-kumar-tiwari",
+    talkTitle: "Data-Driven Strategies for Optimal Disinfection in Rural Water Supply Systems",
+  },
+  {
+    name: "Dr. Raja Biswas",
+    position: "Service Designer & Data Visualization Specialist",
+    affiliation: "Independent Researcher",
+    image: "/speaker-raja.png",
+    tags: ["Speaker"],
+    website: "https://www.behance.net/rgb",
+    talkTitle: "Information Design and Data Visualization for Scientific Insight",
   },
   // Organisers last
   {
@@ -110,8 +133,9 @@ const speakers: Speaker[] = [
     position: "Researcher",
     affiliation: "KMCH Research Foundation",
     image: "/speaker-velmurugan.png",
-    tags: ["Organiser"],
+    tags: ["Speaker", "Organiser"],
     website: "https://chemomicrobiomics.wixsite.com/cmblab/research",
+    talkTitle: "The Hidden Ecology of Artificial Intelligence and Data Science",
   },
 ];
 
